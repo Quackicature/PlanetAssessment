@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Planet View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="PlanetViewController" id="BYZ-38-t0r" customClass="PlanetViewController" customModule="PlanetAssessment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jbG-wH-K37">
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlanetTableCell" rowHeight="92" id="bci-Gl-sbN" customClass="PlanetTableCell" customModule="PlanetAssessment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bci-Gl-sbN" id="hoH-13-Hhh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planet: Earth Moons: 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koh-MG-57A">
+                                                    <rect key="frame" x="50" y="36" width="171" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="koh-MG-57A" firstAttribute="leading" secondItem="hoH-13-Hhh" secondAttribute="leadingMargin" constant="30" id="47D-Rx-jt9"/>
+                                                <constraint firstItem="koh-MG-57A" firstAttribute="centerY" secondItem="hoH-13-Hhh" secondAttribute="centerY" id="By4-cm-3G6"/>
+                                                <constraint firstItem="koh-MG-57A" firstAttribute="top" secondItem="hoH-13-Hhh" secondAttribute="topMargin" constant="25" id="wTh-F9-rPH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mainLabel" destination="koh-MG-57A" id="SVV-bH-fok"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="MCX-T1-WBn"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Uwe-8j-9Tf"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZY-Qw-Xtj">
+                                <rect key="frame" x="337" y="57" width="41" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="n81-Xg-gbR"/>
+                                </constraints>
+                                <state key="normal" title="+" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nbh-ev-Q9n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3ZY-Qw-Xtj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="337" id="CLM-Ch-O5u"/>
+                            <constraint firstItem="jbG-wH-K37" firstAttribute="top" secondItem="3ZY-Qw-Xtj" secondAttribute="bottom" constant="18" id="EAr-rf-VNL"/>
+                            <constraint firstItem="jbG-wH-K37" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G7O-4J-STH"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="jbG-wH-K37" secondAttribute="bottom" constant="-34" id="aNH-Tu-Mda"/>
+                            <constraint firstItem="3ZY-Qw-Xtj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="cB1-eU-uJA"/>
+                            <constraint firstItem="jbG-wH-K37" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gnr-Cy-s0P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3ZY-Qw-Xtj" secondAttribute="trailing" constant="36" id="wkF-3X-xAa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="planetTableView" destination="jbG-wH-K37" id="Ku4-df-VjN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
+        </scene>
+        <!--Alert View Controller-->
+        <scene sceneID="yGQ-Mr-2z1">
+            <objects>
+                <viewController storyboardIdentifier="AlertViewController" id="Z6T-9L-ba3" customClass="AlertViewController" customModule="PlanetAssessment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jhd-tV-Nq8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bvx-td-Qm3">
+                                <rect key="frame" x="87" y="249" width="240" height="179"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Earth has less than 3 moons" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnU-ih-TIc">
+                                        <rect key="frame" x="35" y="30" width="170" height="118"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5YG-td-fdk"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainLabel" destination="CnU-ih-TIc" id="VvQ-dL-sXl"/>
+                        <outlet property="mainView" destination="bvx-td-Qm3" id="Ip3-c6-uM1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5X-Oc-gwi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1125" y="86"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
