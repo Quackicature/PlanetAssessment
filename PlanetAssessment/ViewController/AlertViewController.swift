@@ -8,19 +8,28 @@
 
 import UIKit
 
+// Class to display a View Controller to alert the user of the planet information
 class AlertViewController: UIViewController {
     
-    
+    //MARK: IBOutlets
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var mainLabel: UILabel!
     
+    
+    //MARK: Properties
     var planet: Planet!
     
+    
+    //MARK: View Controller Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAlert()
     }
     
+    //MARK: IBActions
+    
+    
+    //MARK: Functions
     private func setupAlert() {
         mainView.layer.cornerRadius = 25
         mainLabel.text = "\(planet.name) has \(planet.moons) moons"

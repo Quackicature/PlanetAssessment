@@ -8,10 +8,11 @@
 
 import UIKit
 
+// TableViewCell to create our table
 class PlanetTableCell: UITableViewCell {
 
-    @IBOutlet weak var mainLabel: UILabel!
+    @IBOutlet weak var mainLabel: UILabel! // Label to manipulate to present different planets
     
-    static let identifier = "PlanetTableCell"
+    static let identifier = "PlanetTableCell" // Identifier to facilitate getting this cell
 
 }
